@@ -1,10 +1,9 @@
-package nelisriebezos.getvectored;
+ package nelisriebezos.getvectored;
 
-/**
- * Hello world!
- */
 public class App {
+
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+    	EmbeddingDemo demo = new EmbeddingDemo();
+    	demo.demoCallEmbeddedFloat();
     }
 }
