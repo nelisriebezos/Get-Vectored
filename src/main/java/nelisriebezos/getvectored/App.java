@@ -4,6 +4,6 @@ public class App {
 
     public static void main(String[] args) {
     	EmbeddingDemo demo = new EmbeddingDemo();
-    	demo.demoCallEmbeddedFloat();
+    	demo.demoCallEmbeddingBase64();
     }
 }
