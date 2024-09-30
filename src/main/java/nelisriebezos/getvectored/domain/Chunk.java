@@ -1,4 +1,4 @@
-package nelisriebezos.getvectored.assistant.domain;
+package nelisriebezos.getvectored.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,15 +7,19 @@ import lombok.Setter;
 
 import java.util.UUID;
 
-@AllArgsConstructor
+
 @Getter
 @Setter
 public class Chunk {
-    private UUID uuid = UUID.randomUUID();
+    private UUID uuid;
     @NonNull
     private String text;
     @NonNull
     private String embedding;
-    @NonNull
-    private String source;
+
+    public Chunk(String text, String embedding) {
+        this.uuid = UUID.randomUUID();
+        this.text = text;
+        this.embedding = embedding;
+    }
 }

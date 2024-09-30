@@ -23,7 +23,7 @@ public class EmbeddingDemo {
 
     public void demoCallEmbeddingBase64() {
         var embeddingRequest = EmbeddingRequest.builder()
-                .model("text-embedding-ada-002")
+                .model("text-embedding-3-small")
                 .input(Arrays.asList(
                         "shiny sun",
                         "blue sky"))

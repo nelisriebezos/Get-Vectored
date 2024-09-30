@@ -1,4 +1,4 @@
-package nelisriebezos.getvectored.env;
+package nelisriebezos.getvectored.application;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -61,11 +61,11 @@ public class Workspace {
         return Files.readString(Paths.get(createFullPath(sourceFile)), UTF_8);
     }
 
-    public void writeFile(String fileName, String contents) throws IOException {
-        String fullPath = createFullPath(fileName);
+    public void writeFile(String filePath, String contents) throws IOException {
+        String fullPath = createFullPath(filePath);
         createDirectoriesForFile(fullPath);
-        Path filePath = Paths.get(fullPath);
-        try (FileWriter fw = new FileWriter(filePath.toFile())) {
+        Path path = Paths.get(fullPath);
+        try (FileWriter fw = new FileWriter(path.toFile())) {
             fw.write(contents);
         }
     }

@@ -27,17 +27,6 @@ public class StringUtils {
         return fullname.substring(lastDot + 1);
     }
 
-    public static String numberLines(String code) {
-        String[] lines = code.split("\n");
-        StringBuilder numberedCode = new StringBuilder();
-        int lineNum = 1;
-        for (String line : lines) {
-            String lineNumber = String.format("%4d: ", lineNum++);
-            numberedCode.append(lineNumber).append(line).append("\n");
-        }
-        return numberedCode.toString();
-    }
-
     public static String convertSpacesToDashes(String input) {
         return input.replace(' ', '-');
     }
