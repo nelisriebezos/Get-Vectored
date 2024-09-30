@@ -15,23 +15,6 @@ public class Workspace {
     private static final Logger logger = Logger.getLogger(Workspace.class.getName());
     private final String rootFolder = System.getProperty("user.dir");
 
-    public List<String> listDirectories(String pathString) {
-        List<String> directoryNames = new ArrayList<>();
-        Path path = Paths.get(createFullPath(pathString));
-
-        try (DirectoryStream<Path> stream = Files.newDirectoryStream(path)) {
-            for (Path entry : stream) {
-                if (Files.isDirectory(entry)) {
-                    directoryNames.add(entry.getFileName().toString());
-                }
-            }
-        } catch (IOException e) {
-            logger.log(Level.WARNING, "Failed to list directories: " + e.getMessage());
-        }
-
-        return directoryNames;
-    }
-
     public void createDirectory(String directoryName) {
         Path path = Paths.get(createFullPath(directoryName));
         try {
@@ -41,7 +24,7 @@ public class Workspace {
         }
     }
 
-    public void createDirectoriesForFile(String fileName) {
+    private void createDirectoriesForFile(String fileName) {
         File file = new File(fileName);
         File parent = file.getParentFile();
         if (parent != null) {

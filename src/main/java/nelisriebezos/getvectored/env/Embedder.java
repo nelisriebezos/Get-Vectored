@@ -10,8 +10,10 @@ import java.util.List;
 
 public class Embedder {
     private BaseSimpleOpenAI openAI;
+    private  String embeddingModel;
 
-    public Embedder() {
+    public Embedder(String embeddingModel) {
+        this.embeddingModel = embeddingModel;
 //        TODO: Provide apiKey and organizationId as arguments perhaps?
         String apiKey = System.getenv("OPENAI_GETVECTORED_KEY");
         String organizationId = System.getenv("OPENAI_ORGANIZATION_ID");
@@ -23,7 +25,7 @@ public class Embedder {
 
     public List<String> callEmbeddingBase64(List<String> input) {
         var embeddingRequest = EmbeddingRequest.builder()
-                .model("text-embedding-ada-002")
+                .model(embeddingModel)
                 .input(input)
                 .build();
         var futureEmbedding = openAI.embeddings().createBase64(embeddingRequest);
@@ -36,7 +38,7 @@ public class Embedder {
 
     public List<List<Double>> callEmbeddedFloat(List<String> input) {
         var embeddingRequest = EmbeddingRequest.builder()
-                .model("text-embedding-3-small")
+                .model(embeddingModel)
                 .input(input)
                 .build();
         var futureEmbedding = openAI.embeddings().create(embeddingRequest);
