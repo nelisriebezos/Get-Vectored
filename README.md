@@ -7,3 +7,4 @@
 
 ## Ideas while working
 Add a clearance level to the chunk, so that the ai can filter out information that a user is not allowed to have.
+tomorrow look at how the -search for vectors- method is asking for data. design json to that standard.

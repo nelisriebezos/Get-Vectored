@@ -11,8 +11,8 @@ import java.util.logging.Logger;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
 
-public class Workspace {
-    private static final Logger logger = Logger.getLogger(Workspace.class.getName());
+public class FileService {
+    private static final Logger logger = Logger.getLogger(FileService.class.getName());
     private final String rootFolder = System.getProperty("user.dir");
 
     public void createDirectory(String directoryName) {

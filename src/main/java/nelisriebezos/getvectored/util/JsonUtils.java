@@ -1,6 +1,7 @@
 package nelisriebezos.getvectored.util;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
@@ -15,5 +16,10 @@ public class JsonUtils {
     public static <T> T fromJSON(String jsonString, Class<T> cls) throws JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();
         return objectMapper.readValue(jsonString, cls);
+    }
+
+    public static <T> T fromJSON(String jsonString, TypeReference<T> typeReference) throws JsonProcessingException {
+        ObjectMapper objectMapper = new ObjectMapper();
+        return objectMapper.readValue(jsonString, typeReference);
     }
 }
