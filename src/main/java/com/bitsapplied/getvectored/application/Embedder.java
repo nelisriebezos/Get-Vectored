@@ -1,4 +1,4 @@
-package nelisriebezos.getvectored.application;
+package com.bitsapplied.getvectored.application;
 
 import io.github.sashirestela.openai.BaseSimpleOpenAI;
 import io.github.sashirestela.openai.SimpleOpenAI;

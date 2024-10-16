@@ -1,4 +1,4 @@
-package nelisriebezos.getvectored.util;
+package com.bitsapplied.getvectored.util;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;

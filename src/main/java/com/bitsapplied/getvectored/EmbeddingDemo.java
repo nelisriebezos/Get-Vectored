@@ -1,12 +1,12 @@
-package nelisriebezos.getvectored;
-
-import java.util.Arrays;
+package com.bitsapplied.getvectored;
 
 import io.github.sashirestela.openai.BaseSimpleOpenAI;
 import io.github.sashirestela.openai.SimpleOpenAI;
 import io.github.sashirestela.openai.domain.embedding.EmbeddingBase64;
 import io.github.sashirestela.openai.domain.embedding.EmbeddingFloat;
 import io.github.sashirestela.openai.domain.embedding.EmbeddingRequest;
+
+import java.util.Arrays;
 
 public class EmbeddingDemo {
 	private BaseSimpleOpenAI openAI;

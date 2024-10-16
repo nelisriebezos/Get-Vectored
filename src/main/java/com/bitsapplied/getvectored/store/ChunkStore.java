@@ -1,11 +1,11 @@
-package nelisriebezos.getvectored.store;
+package com.bitsapplied.getvectored.store;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
-import nelisriebezos.getvectored.application.ChunkService;
-import nelisriebezos.getvectored.application.FileService;
-import nelisriebezos.getvectored.domain.Chunk;
-import nelisriebezos.getvectored.util.JsonUtils;
+import com.bitsapplied.getvectored.application.ChunkService;
+import com.bitsapplied.getvectored.application.FileService;
+import com.bitsapplied.getvectored.domain.Chunk;
+import com.bitsapplied.getvectored.util.JsonUtils;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -13,9 +13,9 @@ import java.util.List;
 import java.util.logging.Logger;
 
 public class ChunkStore {
-    private static final Logger logger = Logger.getLogger(ChunkStore.class.getName());
-    private static final String STORAGE_FOLDER = ".getvectored";
-    private static final String CHUNK_FILE = "/chunks.json";
+    private final Logger logger = Logger.getLogger(ChunkStore.class.getName());
+    private final String STORAGE_FOLDER = ".getvectored";
+    private final String CHUNK_FILE = "/chunks.json";
     private final FileService fileService;
     private final ChunkService chunkService;
 

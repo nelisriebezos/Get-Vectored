@@ -1,4 +1,4 @@
-package nelisriebezos.getvectored.application;
+package com.bitsapplied.getvectored.application;
 
 import java.io.File;
 import java.io.FileWriter;

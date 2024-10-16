@@ -1,4 +1,4 @@
-package nelisriebezos.getvectored.domain;
+package com.bitsapplied.getvectored.domain;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

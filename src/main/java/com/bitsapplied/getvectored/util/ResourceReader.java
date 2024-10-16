@@ -1,7 +1,7 @@
-package nelisriebezos.getvectored.util;
+package com.bitsapplied.getvectored.util;
 
 
-import nelisriebezos.getvectored.util.exception.ClassPathResourceNotFound;
+import com.bitsapplied.getvectored.util.exception.ClassPathResourceNotFound;
 
 import java.io.BufferedReader;
 import java.io.IOException;

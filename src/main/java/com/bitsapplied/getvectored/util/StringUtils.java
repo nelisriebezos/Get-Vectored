@@ -1,4 +1,4 @@
-package nelisriebezos.getvectored.util;
+package com.bitsapplied.getvectored.util;
 
 import lombok.NonNull;
 

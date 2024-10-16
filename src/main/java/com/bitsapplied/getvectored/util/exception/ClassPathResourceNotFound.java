@@ -1,4 +1,4 @@
-package nelisriebezos.getvectored.util.exception;
+package com.bitsapplied.getvectored.util.exception;
 
 public class ClassPathResourceNotFound extends Throwable {
     public ClassPathResourceNotFound(String classPath, Throwable cause) {
