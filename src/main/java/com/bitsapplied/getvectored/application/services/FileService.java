@@ -1,4 +1,4 @@
-package com.bitsapplied.getvectored.application;
+package com.bitsapplied.getvectored.application.services;
 
 import java.io.File;
 import java.io.FileWriter;

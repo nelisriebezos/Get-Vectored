@@ -1,4 +1,4 @@
-package com.bitsapplied.getvectored.application;
+package com.bitsapplied.getvectored.application.services;
 
 import com.bitsapplied.getvectored.domain.Chunk;
 import org.apache.commons.math3.linear.ArrayRealVector;

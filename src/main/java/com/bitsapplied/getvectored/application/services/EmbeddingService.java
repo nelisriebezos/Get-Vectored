@@ -1,4 +1,4 @@
-package com.bitsapplied.getvectored.application;
+package com.bitsapplied.getvectored.application.services;
 
 import io.github.sashirestela.openai.BaseSimpleOpenAI;
 import io.github.sashirestela.openai.SimpleOpenAI;
@@ -8,11 +8,11 @@ import io.github.sashirestela.openai.domain.embedding.EmbeddingRequest;
 
 import java.util.List;
 
-public class Embedder {
+public class EmbeddingService {
     private BaseSimpleOpenAI openAI;
     private  String embeddingModel;
 
-    public Embedder(String embeddingModel) {
+    public EmbeddingService(String embeddingModel) {
         this.embeddingModel = embeddingModel;
 //        TODO: Provide apiKey and organizationId as arguments perhaps?
         String apiKey = System.getenv("OPENAI_GETVECTORED_KEY");

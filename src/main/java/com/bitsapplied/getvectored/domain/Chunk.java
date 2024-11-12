@@ -13,14 +13,7 @@ import java.util.UUID;
 public class Chunk {
     private UUID uuid;
     private String text;
-//    private String vectorBase64;
     private List<Double> vectorFloat;
-
-//    public Chunk(String text, String vectorBase64) {
-//        this.uuid = UUID.randomUUID();
-//        this.text = text;
-//        this.vectorBase64 = vectorBase64;
-//    }
 
     public Chunk(String text, List<Double> vectorFloat) {
         this.uuid = UUID.randomUUID();

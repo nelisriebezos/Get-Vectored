@@ -1,30 +1,28 @@
 package com.bitsapplied.getvectored.store;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.bitsapplied.getvectored.application.services.FileService;
-import com.bitsapplied.getvectored.domain.Chunk;
+import com.bitsapplied.getvectored.domain.Tag;
 import com.bitsapplied.getvectored.util.JsonUtils;
+import com.fasterxml.jackson.core.JsonProcessingException;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
-public class ChunkStore {
-    private final Logger logger = Logger.getLogger(ChunkStore.class.getName());
+public class TagStore {
+    private final Logger logger = Logger.getLogger(TagStore.class.getName());
     private final String STORAGE_FOLDER = ".getvectored";
-    private final String CHUNK_FILE = "/chunks.json";
+    private final String TAG_FILE = "/tag-index.json";
     private final FileService fileService;
 
-    public ChunkStore(FileService fileService) {
+    public TagStore(FileService fileService) {
         this.fileService = fileService;
     }
 
-    public void persist(List<Chunk> chunks) {
-        String path = STORAGE_FOLDER + CHUNK_FILE;
+    public void Persist(List<Tag> tags) {
+        String path = STORAGE_FOLDER + TAG_FILE;
         try {
-            String json = JsonUtils.toJSON(chunks);
+            String json = JsonUtils.toJSON(tags);
             fileService.writeFile(path, json);
         } catch (JsonProcessingException e) {
             logger.warning("Failed to convert to JSON: " + e.getMessage());
@@ -33,18 +31,17 @@ public class ChunkStore {
         }
     }
 
-    public List<Chunk> read() {
-        String path = STORAGE_FOLDER + CHUNK_FILE;
-        List<Chunk> chunks = new ArrayList<>();
+    public List<Tag> Read() {
+        String path = STORAGE_FOLDER + TAG_FILE;
+        List<Tag> tags = null;
         try {
             String json = fileService.readFile(path);
-            chunks = JsonUtils.fromJSON(json, new TypeReference<>() {
-            });
+            tags = JsonUtils.fromJSON(json, List.class);
         } catch (JsonProcessingException e) {
             logger.warning("Failed to convert from JSON: " + e.getMessage());
         } catch (IOException e) {
             logger.warning("Failed to read the JSON file: " + e.getMessage());
         }
-        return chunks;
+        return tags;
     }
 }
