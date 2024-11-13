@@ -1,7 +1,7 @@
 package com.bitsapplied.getvectored.application;
 
 import com.bitsapplied.getvectored.util.ResourceReader;
-import com.bitsapplied.getvectored.util.exception.ClassPathResourceNotFound;
+import com.bitsapplied.getvectored.util.exceptions.ClassPathResourceNotFound;
 import com.bitsapplied.morpheus.core.Constants;
 import com.bitsapplied.morpheus.core.env.Context;
 import com.bitsapplied.morpheus.core.env.impl.ContextImpl;

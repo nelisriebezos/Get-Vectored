@@ -1,7 +1,7 @@
 package com.bitsapplied.getvectored.util;
 
 
-import com.bitsapplied.getvectored.util.exception.ClassPathResourceNotFound;
+import com.bitsapplied.getvectored.util.exceptions.ClassPathResourceNotFound;
 
 import java.io.BufferedReader;
 import java.io.IOException;
