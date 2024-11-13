@@ -3,6 +3,8 @@ package com.bitsapplied.getvectored;
 import com.bitsapplied.getvectored.application.ContextManager;
 import com.bitsapplied.getvectored.application.agents.DnDAgent;
 import com.bitsapplied.getvectored.application.services.ChannelService;
+import com.bitsapplied.getvectored.util.ResourceReader;
+import com.bitsapplied.getvectored.util.exception.ClassPathResourceNotFound;
 import com.bitsapplied.morpheus.core.agent.HumanAgent;
 import com.bitsapplied.morpheus.core.agent.InteractionMode;
 import com.bitsapplied.morpheus.core.agent.collaboration.Channel;
@@ -16,11 +18,11 @@ import java.util.Scanner;
 public class GetVectored {
 
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, ClassPathResourceNotFound {
 //        EmbeddingDemo demo = new EmbeddingDemo();
 //        demo.demoCallEmbeddingBase64();
 
-//        final String EMBEDDING_MODEL = "text-embedding-3-small";
+//        final String EMBEDDING_MODEL = ResourceReader.readConfigAttribute("OPENAI_MODEL");
 //
 //        FileService fileService = new FileService();
 //        EmbeddingService embeddingService = new EmbeddingService(EMBEDDING_MODEL);
@@ -70,9 +72,11 @@ public class GetVectored {
 //        fileService.writeFile(".getvectored/relatedChunks.txt", content);
 
 
+//        todo: Chatting with an agent
         ContextManager contextManager = new ContextManager();
         Context context = contextManager.createContext();
         ChannelService channelService = new ChannelService(context.getChannelStore());
+
         String CHANNEL_ID = "testChannel";
         String PLAYER_ID = "player";
 

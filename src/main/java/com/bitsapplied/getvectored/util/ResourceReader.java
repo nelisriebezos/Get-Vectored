@@ -7,12 +7,26 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.Properties;
 import java.util.stream.Collectors;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
 
 public class ResourceReader {
     private ResourceReader() {}
+
+    public static String readConfigAttribute(String attributeName) throws ClassPathResourceNotFound {
+        Properties properties = new Properties();
+        try (InputStream input = getClassPathResource("config.properties")) {
+            if (input == null) {
+                throw new IOException("config.properties file not found in classpath");
+            }
+            properties.load(input);
+            return properties.getProperty(attributeName);
+        } catch (IOException e) {
+            throw new ClassPathResourceNotFound("config.properties", e);
+        }
+    }
 
     public static String readClassPathResourceAsString(String resourceName) throws ClassPathResourceNotFound {
         try {
