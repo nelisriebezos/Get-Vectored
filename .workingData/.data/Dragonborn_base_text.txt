@@ -1,0 +1,50 @@
+Physical Description
+Dragonborn stand as towering, draconic humanoids, embodying the power and majesty of their draconic heritage.
+Standing between six and seven feet tall, their muscular bodies are covered in scales that gleam like polished armor, in hues ranging from fiery reds and brilliant golds to deep blacks and icy blues. Their heads bear the unmistakable mark of dragons, with elongated snouts filled with sharp teeth, glowing, reptilian eyes, and sweeping horns or frills that curve gracefully from their brows.
+Their hands and feet end in powerful claws, capable of rending flesh and stone alike, and their dragon-like feet give them a strong, balanced stance.
+Most striking of all is their breath weapon, a visible connection to their draconic lineage. With a glowing throat, they can unleash elemental fury to blast their foes with the magic that relates to their draconic blood.
+
+Lore
+The Dragonborn are a race not born of natural means but crafted through the fusion of alchemical knowledge and ancient magic. Their creation dates back to the Second Age, during the height of the Dark Empire, a period marked by the ruthless pursuit of power.
+The witch-king, driven by an insatiable thirst for dominance, commanded his most skilled alchemists and sorcerers to create a race that could surpass the limitations of humanity. The result of these efforts was the Dragonborn—a hybrid of man and dragon, engineered to be the perfect soldiers for the empire’s unending wars.
+The creation of a Dragonborn was an intricate and perilous process. It involved the merging of human essence with the distilled blood of ancient dragons, combined with powerful arcane rituals. These procedures took place in secret laboratories deep beneath the empire’s fortresses, away from prying eyes. The process was not without its risks; many experiments ended in failure, with the subjects either perishing or becoming monstrous abominations. However, those that survived emerged as formidable beings—tall, muscular, and covered in dragon-like scales, with a natural affinity for both combat and magic.
+The Dragonborn were initially created to serve as the vanguard of the empire's armies. Their strength and resilience made them feared on the battlefield, and their presence alone was often enough to quell rebellion. However they were not with free will. Upon creation they were magically bound in service to their royal master.
+After the fall, the surviving Dragonborn scattered. Many fled to remote areas, forming secluded clans far from the remnants of the empire and the societies that arose from its ashes. These clans have lived in isolation for centuries, preserving their culture and knowledge away from the eyes of the world. They live by a strict code, honoring their ancestors and the lost knowledge of their creation.
+While they no longer serve an empire, the Dragonborn remain formidable warriors and skilled artisans of both magic and alchemy. They are wary of outsiders, often distrusting the world that once sought to use them as tools of war. However, they are not entirely cut off; some Dragonborn venture out as adventurers, scholars, or mercenaries, seeking to understand the world beyond their hidden enclaves.
+
+Society
+Because most dragonborns live in clans, they are a very tight-knit community. They hold many rituals and special relations to the elements that other races hardly know about. These traditions are guarded by the Wyrmkeeper. The leader of the clan. Most Wyrmkeepers are dragonborn who lived during the enslavement of their kind.
+The dragonborn rarely are visited by other dragons. They share their knack for remaining solitary. However they are often friendly when they encounter. Maybe it is the blood they share, or maybe it's something more. But these two races have a certain kinship.
+
+Traditions
+The rite of Scales: Upon reaching adulthood, each Dragonborn undergoes the Rite of Scales, a ceremony where their scales are ritually anointed with special oils and blessed by the Wyrmkeeper. This rite marks their full acceptance into the clan as a warrior or craftsman and symbolizes their connection to their draconic ancestors.
+Blood Bonding: To forge alliances between clans, the Dragonborn practice Blood Bonding, a ritual where representatives from each clan exchange a drop of blood. This ritual symbolizes the unbreakable bond between the clans and their shared ancestry.
+Fire Vigil: Once a year, the Dragonborn gather for the Fire Vigil, a night-long ceremony where they meditate around a large bonfire. During this time, they reflect on the deeds of their ancestors, seek guidance from the spirits of dragons, and renew their oaths to protect their clan and uphold its honor.
+Trial of the Ancients: Before becoming a Wyrmkeeper, a Dragonborn must undertake the Trial of the Ancients, a dangerous pilgrimage to an ancient draconic site. Here, they must seek out a vision or sign from the ancient dragons, proving their worthiness to lead their people.
+
+Universal traits
+Ability Score Increase: Your Strength score increases by 2, and your Charisma score increases by 1.
+Age: Young dragonborn grow quickly. They walk hours after hatching, attain the size and development of a 10-year-old human child by the age of 3, and reach adulthood by 15. They live to be around 370.
+Size: Dragonborn are taller and heavier than humans, standing well over 6 feet tall and averaging almost 250 pounds. Your size is Medium.
+Speed: Your base speed is 30 feet.
+Draconic Ancestry: You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon and damage resistance are determined by the dragon type, as shown in the table.
+Table:
+Black / Acid / 5 by 30 ft. line (Dex. save)
+Blue / Lightning / 5 by 30 ft. line (Dex. save)
+Brass / Fire / 5 by 30 ft. line (Dex. save)
+Bronze / Lightning / 5 by 30 ft. line (Dex. save)
+Copper / Acid / 5 by 30 ft. line (Dex. save)
+Gold / Fire / 15 ft. cone (Dex. save)
+Green / Poison / 15 ft. cone (Con. save)
+Red / Fire / 15 ft. cone (Dex. save)
+Silver / Cold / 15 ft. cone (Con. save)
+White / Cold / 15 ft. cone (Con. save)
+
+Breath Weapon: You can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage type of the exhalation. When you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your draconic ancestry. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level. After you use your breath weapon, you can’t use it again until you complete a long rest.
+
+Born to fight: Dragonborns were created as weapons of oppression and war. They hold the innate ability to wield weapons and magic in combat. You may pick one of the following combat features.
+Breath of the Conqueror: When you score a critical hit with a weapon, you regain the use of your breath weapon if it’s currently expended.
+Breath Blade: Use your bonus action to activate breath weapon, adding the damage it would normally do to your next successful melee strike. The damage type remains the same, and the target does not roll a saving throw.
+Wyrm’s Attunement: When you cast a spell that deals damage of the same type as your breath weapon, you can reroll any 1s on the damage dice once per turn.
+Elemental Echo: After using your breath weapon, your next damaging cantrip deals an additional 1d6 damage of the breath weapon’s type.
+Arcane Resilience: You gain a +1 bonus to saving throws against spells and other magical effects, as your draconic heritage fortifies your mind and body against magic.
