@@ -4,9 +4,14 @@ import com.bitsapplied.getvectored.application.ContextManager;
 import com.bitsapplied.getvectored.application.agents.DnDAgent;
 import com.bitsapplied.getvectored.application.services.ChannelService;
 import com.bitsapplied.morpheus.core.agent.HumanAgent;
+import com.bitsapplied.morpheus.core.agent.InteractionMode;
+import com.bitsapplied.morpheus.core.agent.collaboration.Channel;
+import com.bitsapplied.morpheus.core.agent.collaboration.ChannelMessage;
 import com.bitsapplied.morpheus.core.env.Context;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.Scanner;
 
 public class GetVectored {
 
@@ -68,9 +73,30 @@ public class GetVectored {
         ContextManager contextManager = new ContextManager();
         Context context = contextManager.createContext();
         ChannelService channelService = new ChannelService(context.getChannelStore());
+        String CHANNEL_ID = "testChannel";
+        String PLAYER_ID = "player";
 
         HumanAgent humanAgent = new HumanAgent(context, "player");
         DnDAgent agent = new DnDAgent(context, "helpdesk");
-        channelService.newChannel("channelId", "channelDescriptionS1", null);
+        agent.setInteractionMode(InteractionMode.SPEAK_ALWAYS);
+        channelService.newChannel(CHANNEL_ID, "channelDescriptionS1", Arrays.asList(humanAgent, agent));
+
+        for (ChannelMessage channelMessage : channelService.getChannel(CHANNEL_ID).getMessages()) {
+            System.out.println(String.format("[%s] %s", channelMessage.getSender(), channelMessage.getText()));
+        }
+
+        Scanner scanner = new Scanner(System.in);
+        String line;
+
+        while (true) {
+            System.out.print(String.format("[%s] ", humanAgent.getIdentifier()));
+            line = scanner.nextLine();
+            if (line.equalsIgnoreCase("exit")) {
+                break;
+            }
+
+            channelService.postMessage(CHANNEL_ID, PLAYER_ID, line);
+        }
+        scanner.close();
     }
 }

@@ -28,16 +28,28 @@ public class ChannelService implements ChannelListener {
         this.channelStore = channelStore;
     }
 
-    public void newChannel(String channelId, String channelDescriptionS1, List<Agent> agents) {
+    public Channel getChannel(String channelId) {
+        return channelStore.getChannel(channelId);
+    }
+
+    public Channel newChannel(String channelId, String channelDescriptionS1, List<Agent> agents) {
+//        todo: Need to handle passing agents to newChannel() better
         if (!channelStore.channelExists(channelId)) {
-            channelStore.newChannel(channelId, channelDescriptionS1, );
+            channelStore.newChannel(channelId, channelDescriptionS1, agents.get(0), agents.get(1));
         }
         Channel channel = channelStore.getChannel(channelId);
         channel.addChannelListener(this);
+        return channel;
+    }
+
+    public void postMessage(String channelId, String sender, String text) {
+        Channel channel = channelStore.getChannel(channelId);
+        channel.postMessage(sender, text);
     }
 
     @Override
     public void receive(ChannelMessage channelMessage) {
+        System.out.println(String.format("[%s] %s", channelMessage.getSender(), channelMessage.getText()));
     }
 
     @Override
@@ -52,6 +64,5 @@ public class ChannelService implements ChannelListener {
 
     @Override
     public void receive(StreamMessage streamMessage) throws AbortRequestedException {
-        System.out.println(streamMessage.getTextLn());
     }
 }
