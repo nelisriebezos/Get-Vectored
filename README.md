@@ -7,4 +7,5 @@
 
 ## Ideas while working
 Add a clearance level to the chunk, so that the ai can filter out information that a user is not allowed to have.
-tomorrow look at how the -search for vectors- method is asking for data. design json to that standard.
+tomorrow look at how the -search for vectors- method is asking for data. design json to that standard.  
+logging can be done, let the user say when a response was not satisfactory. Than save that response and the question that lead to it + any other logging info

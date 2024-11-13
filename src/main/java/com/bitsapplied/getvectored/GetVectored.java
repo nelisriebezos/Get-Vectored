@@ -79,6 +79,8 @@ public class GetVectored {
         HumanAgent humanAgent = new HumanAgent(context, "player");
         DnDAgent agent = new DnDAgent(context, "helpdesk");
         agent.setInteractionMode(InteractionMode.SPEAK_ALWAYS);
+        agent.setPrompts("You are an expert when it comes to dnd, and you are designed to help players out with playing the game.",
+                "Summary:\n${_summary}\n${_prompt}\n");
         channelService.newChannel(CHANNEL_ID, "channelDescriptionS1", Arrays.asList(humanAgent, agent));
 
         for (ChannelMessage channelMessage : channelService.getChannel(CHANNEL_ID).getMessages()) {
